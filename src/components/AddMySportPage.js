@@ -17,11 +17,19 @@ export class AddMySportPage extends React.Component {
         <h1>Add MySport</h1>
         <MySportForm
           onSubmit={this.onSubmit}
+          parentID={this.props.filters.parentID}
         />
       </div>
     )
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+      filters: state.filters
+  };
+};
+
 const mapDispatchToProps = (dispatch) => {
   return {
     addMySport: (mySport) => {
@@ -30,4 +38,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(null, mapDispatchToProps)(AddMySportPage);
+export default connect(mapStateToProps, mapDispatchToProps)(AddMySportPage);

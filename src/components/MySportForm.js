@@ -26,6 +26,7 @@ class MySportForm extends React.Component {
         
         this.state = {
             name: props.mySport ? props.mySport.name : '',
+            parent: props.mySport ? props.mySport.parent : this.props.parentID,
             defaultAcademyChecked,
             defaultRacingChecked,
             defaultAllActivitiesChecked,
@@ -132,7 +133,8 @@ class MySportForm extends React.Component {
             }
             this.props.onSubmit({ 
                 name,
-                levels
+                levels,
+                parent: this.state.parent
             });
         }
     }
