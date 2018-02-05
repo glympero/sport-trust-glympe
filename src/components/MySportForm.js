@@ -1,6 +1,5 @@
 import React from 'react';
 import SportDashboardPage from './SportDashboardPage';
-import {Checkbox, CheckboxGroup} from 'react-checkbox-group';
 
 class MySportForm extends React.Component {
     constructor(props) {
