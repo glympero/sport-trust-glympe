@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { setParentIDFilter } from '../actions/filters';
 import { addMySport } from '../actions/mySports';
-import { Link } from 'react-router-dom';
 import { history } from '../routers/AppRouter';
 
 class SportListFilters extends React.Component {
@@ -38,7 +37,7 @@ class SportListFilters extends React.Component {
     render(){
         return (
             <div>
-                <h4><Link to={`/edit/${this.props.id}`}>{this.props.name}</Link></h4>
+                <h4>{this.props.name}</h4>
                 <span>{this.props.desc}</span>
                 <button onClick={this.setParentFilter}>Select</button>
                 
